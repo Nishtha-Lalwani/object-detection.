@@ -30,7 +30,7 @@ objects = results;
 
 
 function draw(){
-image(img, 0, 0, 600, 400);
+image(img, 0, 0, 640, 420);
 
 
 if(status1 !="")
@@ -39,7 +39,7 @@ if(status1 !="")
     document.getElementById("status").innerHTML = "Status : Object detecting";
     fill("#808080");
     percentage = floor(objects[i].confidence * 100);
-    text(object[i].label + " " + percentage + "%", objects[i].x + 15 , objects[i].y + 15);
+    text(objects[i].label + " " + percentage + "%", objects[i].x + 15 , objects[i].y + 15);
     noFill();
     stroke("#FFD700");
     rect(objects[i].x , objects[i].y , objects[i].width , objects[i].height);
